@@ -3,7 +3,7 @@
     <head>
     
         <meta charset="utf-8">
-        <title> SmartAdmin (AngularJS)</title>
+        <title>Parque Automotor OET</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -11,31 +11,31 @@
 
         <!-- #CSS Links -->
         <!-- Basic Styles -->
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/font-awesome.min.css')}}">
 
         <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/smartadmin-production-plugins.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/smartadmin-production.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/smartadmin-skins.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/smartadmin-production-plugins.min.css')}}">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/smartadmin-production.min.css')}}">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/smartadmin-skins.min.css')}}">
         
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/smartadmin-angular.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/smartadmin-angular.css')}}">
 
         <!-- SmartAdmin RTL Support (Not using RTL? Disable the CSS below to save bandwidth) -->
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/smartadmin-rtl.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/smartadmin-rtl.min.css')}}">
 
         <!-- We recommend you use "your_style.css" to override SmartAdmin
         specific styles this will also ensure you retrain your customization with each SmartAdmin update.
         <link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
 
         <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css/demo.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/css/demo.min.css')}}">
 
         <!-- #FAVICONS -->
         <link rel="shortcut icon" href="styles/img/favicon/favicon.ico" type="image/x-icon">
 
         <!-- #GOOGLE FONT -->
-    <!--    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700"> -->
+        <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700"> -->
 
         <!-- #APP SCREEN / ICONS -->
         <!-- Specifying a Webpage Icon for Web Clip
@@ -97,10 +97,7 @@
 
     -->
 
-    <body data-smart-device-detect
-        data-smart-fast-click
-        data-smart-layout
-        data-smart-page-title="SmartAdmin AngularJS">
+    <body data-smart-device-detect data-smart-fast-click data-smart-layout data-smart-page-title="Parque Automotor OET">
 
         <!-- ui-view container -->
 
@@ -109,7 +106,6 @@
             <!-- HEADER -->
             <div data-smart-include="app/layout/partials/header.tpl.html" class="placeholder-header"></div>
             <!-- END HEADER -->
-
 
             <!-- Left panel : Navigation area -->
             <!-- Note: This width of the aside area can be adjusted through LESS variables -->
@@ -123,26 +119,23 @@
 
             <!-- RIBBON -->
             <div id="ribbon">
+                <span class="ribbon-button-alignment">
+                    <span id="refresh" class="btn btn-ribbon" reset-widgets
+                        tooltip-placement="bottom"
+                        smart-tooltip-html="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings.">
+                        <i class="fa fa-refresh"></i>
+                    </span>
+                </span>
 
-            <span class="ribbon-button-alignment">
-            <span id="refresh" class="btn btn-ribbon" reset-widgets
-            tooltip-placement="bottom"
-            smart-tooltip-html="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings.">
-            <i class="fa fa-refresh"></i>
-            </span>
-            </span>
-
-            <!-- breadcrumb -->
-            <state-breadcrumbs></state-breadcrumbs>
-            <!-- end breadcrumb -->
-
-
+                <!-- breadcrumb -->
+                <state-breadcrumbs></state-breadcrumbs>
+                <!-- end breadcrumb -->
             </div>
             <!-- END RIBBON -->
 
 
             <div data-smart-router-animation-wrap="content content@app" data-wrap-for="#content">
-            <div data-ui-view="content" data-autoscroll="false"></div>
+                <div data-ui-view="content" data-autoscroll="false"></div>
             </div>
 
             </div>
@@ -150,29 +143,14 @@
 
             <!-- PAGE FOOTER -->
             <div data-smart-include="app/layout/partials/footer.tpl.html"></div>
-
             <div data-smart-include="app/layout/shortcut/shortcut.tpl.html"></div>
-
             <!-- END PAGE FOOTER -->
 
-
-
         </div>
-
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!--[if lt IE 9]>
-            <script src="plugin/es5-shim/es5-shim.js"></script>
-            <script src="plugin/json3/lib/json3.min.js"></script>
-        <![endif]-->
 
         <!-- Use for production after building the project with grunt --> 
         <script src="build/vendor.js"></script>
         <script src="build/app.js"></script>
-
-
-        </body>
+    </body>
     
 </html>
